@@ -1,0 +1,99 @@
+TYPE CONVERSION TEST RESULTS
+============================================================
+OK    int(0)               -> 0
+OK    float(0)             -> 0.0
+OK    str(0)               -> '0'
+OK    bool(0)              -> False
+ERROR list(0)              -> TypeError: 'int' object is not iterable
+ERROR tuple(0)             -> TypeError: 'int' object is not iterable
+OK    int(1)               -> 1
+OK    float(1)             -> 1.0
+OK    str(1)               -> '1'
+OK    bool(1)              -> True
+ERROR list(1)              -> TypeError: 'int' object is not iterable
+ERROR tuple(1)             -> TypeError: 'int' object is not iterable
+OK    int(-1)              -> -1
+OK    float(-1)            -> -1.0
+OK    str(-1)              -> '-1'
+OK    bool(-1)             -> True
+ERROR list(-1)             -> TypeError: 'int' object is not iterable
+ERROR tuple(-1)            -> TypeError: 'int' object is not iterable
+OK    int(3.14)            -> 3
+OK    float(3.14)          -> 3.14
+OK    str(3.14)            -> '3.14'
+OK    bool(3.14)           -> True
+ERROR list(3.14)           -> TypeError: 'float' object is not iterable
+ERROR tuple(3.14)          -> TypeError: 'float' object is not iterable
+OK    int(True)            -> 1
+OK    float(True)          -> 1.0
+OK    str(True)            -> 'True'
+OK    bool(True)           -> True
+ERROR list(True)           -> TypeError: 'bool' object is not iterable
+ERROR tuple(True)          -> TypeError: 'bool' object is not iterable
+OK    int(False)           -> 0
+OK    float(False)         -> 0.0
+OK    str(False)           -> 'False'
+OK    bool(False)          -> False
+ERROR list(False)          -> TypeError: 'bool' object is not iterable
+ERROR tuple(False)         -> TypeError: 'bool' object is not iterable
+ERROR int('')              -> ValueError: invalid literal for int() with base 10: ''
+ERROR float('')            -> ValueError: could not convert string to float: ''
+OK    str('')              -> ''
+OK    bool('')             -> False
+OK    list('')             -> []
+OK    tuple('')            -> ()
+ERROR int('False')         -> ValueError: invalid literal for int() with base 10: 'False'
+ERROR float('False')       -> ValueError: could not convert string to float: 'False'
+OK    str('False')         -> 'False'
+OK    bool('False')        -> True
+OK    list('False')        -> ['F', 'a', 'l', 's', 'e']
+OK    tuple('False')       -> ('F', 'a', 'l', 's', 'e')
+OK    int('123')           -> 123
+OK    float('123')         -> 123.0
+OK    str('123')           -> '123'
+OK    bool('123')          -> True
+OK    list('123')          -> ['1', '2', '3']
+OK    tuple('123')         -> ('1', '2', '3')
+ERROR int('3.14')          -> ValueError: invalid literal for int() with base 10: '3.14'
+OK    float('3.14')        -> 3.14
+OK    str('3.14')          -> '3.14'
+OK    bool('3.14')         -> True
+OK    list('3.14')         -> ['3', '.', '1', '4']
+OK    tuple('3.14')        -> ('3', '.', '1', '4')
+OK    int('  7  ')         -> 7
+OK    float('  7  ')       -> 7.0
+OK    str('  7  ')         -> '  7  '
+OK    bool('  7  ')        -> True
+OK    list('  7  ')        -> [' ', ' ', '7', ' ', ' ']
+OK    tuple('  7  ')       -> (' ', ' ', '7', ' ', ' ')
+ERROR int([])              -> TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+ERROR float([])            -> TypeError: float() argument must be a string or a real number, not 'list'
+OK    str([])              -> '[]'
+OK    bool([])             -> False
+OK    list([])             -> []
+OK    tuple([])            -> ()
+ERROR int([1, 2, 3])       -> TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+ERROR float([1, 2, 3])     -> TypeError: float() argument must be a string or a real number, not 'list'
+OK    str([1, 2, 3])       -> '[1, 2, 3]'
+OK    bool([1, 2, 3])      -> True
+OK    list([1, 2, 3])      -> [1, 2, 3]
+OK    tuple([1, 2, 3])     -> (1, 2, 3)
+ERROR int(())              -> TypeError: int() argument must be a string, a bytes-like object or a real number, not 'tuple'
+ERROR float(())            -> TypeError: float() argument must be a string or a real number, not 'tuple'
+OK    str(())              -> '()'
+OK    bool(())             -> False
+OK    list(())             -> []
+OK    tuple(())            -> ()
+ERROR int((1, 2))          -> TypeError: int() argument must be a string, a bytes-like object or a real number, not 'tuple'
+ERROR float((1, 2))        -> TypeError: float() argument must be a string or a real number, not 'tuple'
+OK    str((1, 2))          -> '(1, 2)'
+OK    bool((1, 2))         -> True
+OK    list((1, 2))         -> [1, 2]
+OK    tuple((1, 2))        -> (1, 2)
+ERROR int({'a': 1})        -> TypeError: int() argument must be a string, a bytes-like object or a real number, not 'dict'
+ERROR float({'a': 1})      -> TypeError: float() argument must be a string or a real number, not 'dict'
+OK    str({'a': 1})        -> "{'a': 1}"
+OK    bool({'a': 1})       -> True
+OK    list({'a': 1})       -> ['a']
+OK    tuple({'a': 1})      -> ('a',)
+============================================================
